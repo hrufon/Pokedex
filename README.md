@@ -5,7 +5,7 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Project run
 ```
 npm run serve
 npx vue-cli-service serve

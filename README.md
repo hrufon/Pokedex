@@ -1,4 +1,4 @@
-# pokedex
+# pokedex - vue.js
 
 ## Project setup
 ```

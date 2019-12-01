@@ -36,8 +36,7 @@
                     })
                     .then((data) => {
                         this.nextUrl = data.next;
-                        data.results.forEach(pokemon => {
-                            pokemon.id = pokemon.type
+                        data.results.forEach(pokemon => {                     
                             pokemon.id = pokemon.url.split('/')
                                 .filter(function(part) { return !!part }).pop();
                             this.pokemons.push(pokemon);

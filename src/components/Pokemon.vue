@@ -43,7 +43,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import url('https://fonts.googleapis.com/css?family=Acme');
   .container {
     display: flex;
     justify-content: center;

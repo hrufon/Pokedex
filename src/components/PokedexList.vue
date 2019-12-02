@@ -5,13 +5,6 @@
              @click="setPokemonUrl(pokemon.url)">
       <img :src="imageUrl + pokemon.id + '.png'" width="96" height="96" alt="">
       <h3>{{ pokemon.name }}</h3>
-      <div class="types">
-        <div class="type"
-             v-for="(value, index) in pokemon.types"
-             :key="'value'+index">
-          {{ value.type.name }}
-        </div>
-      </div>
     </article>
     <article2>
     <button @click="pokemonToShow += 3">Load More</button>

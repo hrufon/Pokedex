@@ -36,7 +36,8 @@
                     })
                     .then((data) => {
                         this.nextUrl = data.next;
-                        data.results.forEach(pokemon => {                     
+                        data.results.forEach(pokemon => {
+                            pokemon.id = pokemon.type
                             pokemon.id = pokemon.url.split('/')
                                 .filter(function(part) { return !!part }).pop();
                             this.pokemons.push(pokemon);
@@ -46,7 +47,6 @@
                         console.log(error);
                     })
             },
-
             next() {
                 this.currentUrl = this.nextUrl;
                 this.fetchData();

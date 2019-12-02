@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <h1>Pokedex</h1>
-    <PokemonList
+    <PokedexList
       :imageUrl="imageUrl"
       :apiUrl="apiUrl"
       @setPokemonUrl="setPokemonUrl" />
-    <PokemonDetail
+    <PokedexDetail
       v-if="showDetail"
       :pokemonUrl="pokemonUrl"
       :imageUrl="imageUrl"
@@ -14,8 +14,8 @@
 </template>
 
 <script>
-    import PokemonList from './PokemonList.vue';
-    import PokemonDetail from './PokemonDetail.vue';
+    import PokedexList from './PokedexList.vue';
+    import PokedexDetail from './PokedexDetail.vue';
     export default {
         data: () => {
             return {
@@ -26,8 +26,8 @@
             }
         },
         components: {
-            PokemonList,
-            PokemonDetail
+            PokedexList,
+            PokedexDetail
         },
         methods: {
             setPokemonUrl(url) {
@@ -43,6 +43,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import url('https://fonts.googleapis.com/css?family=Acme');
   .container {
     display: flex;
     justify-content: center;

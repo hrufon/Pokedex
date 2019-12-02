@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Pokemon/>
+    <Pokedex/>
   </div>
 </template>
 
 <script>
 
-import Pokemon from "./components/Pokemon";
+import Pokedex from "./components/Pokedex";
 
 export default {
   components: {
-      Pokemon,
+      Pokedex,
   }
 }
 

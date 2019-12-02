@@ -5,6 +5,13 @@
              @click="setPokemonUrl(pokemon.url)">
       <img :src="imageUrl + pokemon.id + '.png'" width="96" height="96" alt="">
       <h3>{{ pokemon.name }}</h3>
+      <div class="types">
+        <div class="type"
+             v-for="(value, index) in pokemon.types"
+             :key="'value'+index">
+          {{ value.type.name }}
+        </div>
+      </div>
     </article>
     <article2>
     <button @click="pokemonToShow += 3">Load More</button>
@@ -37,7 +44,6 @@
                     .then((data) => {
                         this.nextUrl = data.next;
                         data.results.forEach(pokemon => {
-                            pokemon.id = pokemon.type
                             pokemon.id = pokemon.url.split('/')
                                 .filter(function(part) { return !!part }).pop();
                             this.pokemons.push(pokemon);
